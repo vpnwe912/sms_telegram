@@ -1,0 +1,20 @@
+{
+    "name": "sms/sms-telegram",
+    "description": "SMS Telegram",
+    "license": "MIT License",
+    "autoload": {
+        "psr-4": {
+            "Svobo\\SmsConsiderPpUa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergey Senchuk",
+            "email": "svobodadl@ukr.net"
+        }
+    ],
+    "require": {
+        "adldap2/adldap2": "^10.5",
+        "symfony/dotenv": "^7.1"
+    }
+}
