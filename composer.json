@@ -1,7 +1,6 @@
 {
-    "name": "sms/sms-telegram",
+    "name": "svobo/sms.consider.pp.ua",
     "description": "SMS Telegram",
-    "license": "MIT License",
     "autoload": {
         "psr-4": {
             "Svobo\\SmsConsiderPpUa\\": "src/"
@@ -14,7 +13,8 @@
         }
     ],
     "require": {
-        "adldap2/adldap2": "^10.5",
-        "symfony/dotenv": "^7.1"
+        "ext-ldap": "*",
+        "ext-mysqli": "*",
+        "php": ">=7.4"
     }
 }
