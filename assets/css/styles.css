@@ -1,0 +1,195 @@
+/* Общие стили */
+:root[data-bs-theme="light"] {
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #212529;
+    --bs-navbar-bg: #cacaca;
+    --bs-footer-bg: #f8f9fa;
+    
+    /* Новые переменные для цвета текста */
+    --bs-text-primary: #212529; /* Основной текст */
+    --bs-text-navbar: #000000;  /* Текст в navbar */
+    --bs-text-footer: #212529;  /* Текст в footer */
+    --bs-text-heading: #212529; /* Текст заголовков */
+    --bs-text-muted: #6c757d;    /* Цвет для мутированного текста */
+
+    /* Новые переменные для чата */
+    --message-sent-bg: #dcf8c6;       /* Светлый зелёный для отправленных сообщений */
+    --message-sent-color: #212529;   /* Тёмный текст для отправленных сообщений */
+    --message-received-bg: #00ff33;   /* Белый для полученных сообщений */
+    --message-received-color: #212529; /* Тёмный текст для полученных сообщений */
+}
+
+:root[data-bs-theme="dark"] {
+    --bs-body-bg: #212529;
+    --bs-body-color: #ffffff;
+    --bs-navbar-bg: #343a40;
+    --bs-footer-bg: #343a40;
+    
+    /* Новые переменные для цвета текста */
+    --bs-text-primary: #ffffff; /* Основной текст */
+    --bs-text-navbar: #ffffff;  /* Текст в navbar */
+    --bs-text-footer: #ffffff;  /* Текст в footer */
+    --bs-text-heading: #ffffff; /* Текст заголовков */
+    --bs-text-muted: #adb5bd;    /* Цвет для мутированного текста */
+
+    /* Новые переменные для чата */
+    --message-sent-bg: #075e54;        /* Тёмный зелёный для отправленных сообщений */
+    --message-sent-color: #ffffff;     /* Светлый текст для отправленных сообщений */
+    --message-received-bg: #343a40;    /* Тёмно-серый для полученных сообщений */
+    --message-received-color: #ffffff; /* Светлый текст для полученных сообщений */
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: Arial, sans-serif; /* Пример шрифта */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    background-color: var(--bs-navbar-bg) !important;
+    color: var(--bs-text-navbar);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer {
+    background-color: var(--bs-footer-bg) !important;
+    color: var(--bs-text-footer);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Общие стили для текста */
+.text-primary {
+    color: var(--bs-text-primary) !important;
+}
+
+.text-heading {
+    color: var(--bs-text-heading) !important;
+}
+
+/* Применение цвета текста в навигационной панели */
+.navbar-nav .nav-link {
+    color: var(--bs-text-navbar) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-text-primary) !important;
+}
+
+/* Применение цвета текста в футере */
+.footer .text-muted {
+    color: var(--bs-text-footer) !important;
+}
+
+/* Применение цвета заголовков */
+.card-title {
+    color: var(--bs-text-heading);
+}
+
+/* Стили для кнопок */
+.btn-outline-secondary {
+    color: var(--bs-text-primary);
+    border-color: var(--bs-text-primary);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--bs-text-primary);
+    color: var(--bs-body-bg);
+}
+
+/* Дополнительные стили */
+body, .navbar, .footer {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.form-control {
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+}
+
+/* Кнопка при наведении */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Стили для чата */
+#chat-container {
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    overflow-y: scroll;
+    background-color: var(--bs-body-bg);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Общие стили сообщений */
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Увеличено для лучшего разделения */
+}
+
+/* Отправленные сообщения */
+.message.sent {
+    align-items: flex-end;
+}
+
+.message.sent .message-content {
+    background-color: var(--message-sent-bg);
+    color: var(--message-sent-color);
+    border-radius: 15px 15px 0 15px;
+    padding: 15px 20px; /* Увеличено для большего объёма */
+    max-width: 60%;
+    font-size: 1.1em; /* Увеличен размер текста */
+}
+
+/* Полученные сообщения */
+.message.received {
+    align-items: flex-start;
+}
+
+.message.received .message-content {
+    background-color: var(--message-received-bg);
+    color: var(--message-received-color);
+    border-radius: 15px 15px 15px 0;
+    padding: 15px 20px; /* Увеличено для большего объёма */
+    max-width: 60%;
+    font-size: 1.1em; /* Увеличен размер текста */
+}
+
+/* Стили отправителя */
+.sender-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1em; /* Увеличен размер шрифта */
+    color: var(--bs-text-primary);
+    /* Дополнительное выделение */
+    background-color: rgba(0, 0, 0, 0.05); /* Лёгкий фон */
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* Стили временных меток */
+.timestamp {
+    font-size: 0.8em;
+    color: var(--bs-text-muted);
+    text-align: right;
+    margin-bottom: 10px; /* Увеличено для отделения от текста */
+}
+
+/* Стили текста сообщения */
+.text {
+    white-space: pre-wrap;
+    line-height: 1.5; /* Увеличен интервал между строками для лучшей читаемости */
+}
