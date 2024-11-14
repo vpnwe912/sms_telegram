@@ -121,7 +121,8 @@ body, .navbar, .footer {
 }
 
 /* Стили для чата */
-#chat-container {
+#chat-container,
+#all-messages-container {
     padding: 15px;
     border-radius: 5px;
     display: flex;
@@ -171,12 +172,12 @@ body, .navbar, .footer {
 .sender-name {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 1em; /* Увеличен размер шрифта */
+    font-size: 1.1em; /* Увеличен размер шрифта */
     color: var(--bs-text-primary);
     /* Дополнительное выделение */
     background-color: rgba(0, 0, 0, 0.05); /* Лёгкий фон */
-    padding: 3px 6px;
-    border-radius: 3px;
+    padding: 4px 8px; /* Увеличены отступы */
+    border-radius: 4px;
     display: inline-block;
 }
 
@@ -191,5 +192,13 @@ body, .navbar, .footer {
 /* Стили текста сообщения */
 .text {
     white-space: pre-wrap;
-    line-height: 1.5; /* Увеличен интервал между строками для лучшей читаемости */
+    line-height: 1.6; /* Увеличен интервал между строками для лучшей читаемости */
+    font-size: 1.1em; /* Увеличен размер текста */
+}
+
+/* Убедитесь, что поля даты и текста имеют достаточную ширину на мобильных устройствах */
+@media (max-width: 767.98px) {
+    .form-control, .form-select, .btn {
+        width: 100%;
+    }
 }

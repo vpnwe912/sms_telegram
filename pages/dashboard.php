@@ -27,7 +27,7 @@ $database = new Database($config['db']);
 $smsModel = new Sms($database);
 
 // Получаем последние 20 SMS-сообщений
-$smsList = $smsModel->getLatestSms(20);
+$smsList = $smsModel->getLatestSms(15);
 
 // Определите текущий номер пользователя (получатель)
 $currentUserNumber = '380630200978'; // Замените на фактический номер пользователя
@@ -35,7 +35,7 @@ $currentUserNumber = '380630200978'; // Замените на фактическ
 <?php include '../templates/header.php'; ?>
 
 <main class="container my-5">
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-12">
             <div class="card shadow mb-4">
                 <div class="card-body">
@@ -44,7 +44,7 @@ $currentUserNumber = '380630200978'; // Замените на фактическ
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Раздел для отображения чата -->
     <div class="row">
