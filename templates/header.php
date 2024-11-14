@@ -139,8 +139,8 @@ $basePath = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
                 <div class="collapse navbar-collapse" id="navcol-2">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="/dashboard">Главная</a></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Настройки</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/all_messages">Все сообщения</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/settings">Настройки</a></li>
                     </ul><a class="btn btn-primary ms-md-2" role="button" href="/logout">Выйти</a>
                 </div>
             </div>

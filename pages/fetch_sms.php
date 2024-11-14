@@ -24,7 +24,7 @@ $database = new Database($config['db']);
 $smsModel = new Sms($database);
 
 // Получаем последние 20 SMS-сообщений
-$smsList = $smsModel->getLatestSms(20);
+$smsList = $smsModel->getLatestSms(15);
 
 // Устанавливаем заголовок как JSON
 header('Content-Type: application/json');
