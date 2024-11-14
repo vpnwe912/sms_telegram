@@ -10,6 +10,18 @@ CREATE TABLE `users` (
   UNIQUE KEY `username` (`username`)
 );
 
+CREATE TABLE IF NOT EXISTS sms_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender VARCHAR(50) NOT NULL,
+    recipient VARCHAR(50) NOT NULL,
+    text TEXT NOT NULL,
+    received_at DATETIME NOT NULL
+);
+
+
+
+
+
 -- Таблица для хранения пользователей
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
